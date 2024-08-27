@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+
+.background-gradient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  width: 60%;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #0575E6 0%,
+    #02298A 84.79%,
+    #021B79 100%
+  );
+  position: relative;
+
+  .content {
+    color: white;
+    z-index: 1;
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin: 0.5rem 0 2rem;
+    }
+  }
+
+  .svg-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 431px;
+    height: 280px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.logo-mobile {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 25vh;
+    background: linear-gradient(
+      to bottom,
+      #0575E6 0%,
+      #02298A 84.79%,
+      #021B79 100%
+    );
+
+    color: aliceblue;
+  }
+}
+
+app-form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100vh;
+  padding: 2rem;
+  background: white;
+
+  @media (max-width: 768px) {
+    width: 85%;
+  }
+}
