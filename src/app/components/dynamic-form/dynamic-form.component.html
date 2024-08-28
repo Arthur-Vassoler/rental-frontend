@@ -1,0 +1,34 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <ng-container *ngFor="let field of fields">
+    <mat-form-field appearance="fill" *ngIf="hasValidControl(field.type)">
+      <mat-label>{{ field.label }}</mat-label>
+
+      <input
+        matInput
+        [type]="field.type"
+        [formControlName]="field.name"
+        [attr.placeholder]="field.label"
+        *ngIf="field.type === 'text' || field.type === 'password' || field.type === 'email'"
+        [mask]="field.name === 'cpfCnpj' ? 'CPF_CNPJ' : ''"
+        [dropSpecialCharacters]="false"
+      />
+
+      <mat-select *ngIf="field.type === 'select'" [formControlName]="field.name">
+        <mat-option *ngFor="let option of field.options" [value]="option.value">
+          {{ option.label }}
+        </mat-option>
+      </mat-select>
+
+      <mat-error *ngIf="form.get(field.name)?.hasError('cpfCnpjInvalid')">
+        {{ field.errorMessage || 'CPF/CNPJ inválido' }}
+      </mat-error>
+      <mat-error *ngIf="form.get(field.name)?.invalid && !form.get(field.name)?.hasError('cpfCnpjInvalid')">
+        {{ field.errorMessage || 'Campo inválido' }}
+      </mat-error>
+    </mat-form-field>
+
+    <div *ngIf="field.type === 'button'">
+      <button mat-raised-button color="primary" type="submit">{{ field.label }}</button>
+    </div>
+  </ng-container>
+</form>
