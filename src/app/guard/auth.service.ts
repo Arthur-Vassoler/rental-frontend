@@ -22,6 +22,9 @@ export class AuthService {
       tap(authResult => this.setSession(authResult)),
       shareReplay(),
       catchError(error => {
+        if (error.status != 403) 
+          return throwError(() => Error('Desculpe, algo deu errado em nosso sistema. Estamos trabalhando para resolver o problema o mais rápido possível.'))
+
         return throwError(() => new Error('Falha no login. Por favor, verifique suas credenciais.'));
       })
     );
