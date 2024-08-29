@@ -42,6 +42,7 @@ export class AuthService {
 
   logout(): void {
     sessionStorage.removeItem("loggedInUser");
+    this.router.navigate(['/login']);
   }
 
   public isLoggedIn(): boolean {
