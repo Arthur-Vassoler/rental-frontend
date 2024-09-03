@@ -1,5 +1,8 @@
-<div class="container">
-  <!--- <app-form></app-form> -->
-  <app-dynamic-list [dataService$]="items$"></app-dynamic-list>
+<div class="header">
+  <button mat-raised-button color="accent" *ngIf="isFormVisible" (click)="goBackToList()" class="header-button">Voltar para Lista</button>
+  <button mat-raised-button color="primary" *ngIf="!isFormVisible" (click)="openForm()" class="header-button">Abrir Formulário</button>
 </div>
-
+<div class="container">
+  <app-dynamic-list *ngIf="!isFormVisible" [dataService$]="items$"></app-dynamic-list>
+  <app-form *ngIf="isFormVisible" (formSubmitted)="onFormSubmitted($event)"></app-form>
+</div>
