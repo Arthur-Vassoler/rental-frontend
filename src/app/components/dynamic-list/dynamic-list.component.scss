@@ -1,0 +1,39 @@
+.mat-elevation-z8 {
+  margin: 20px auto;
+  max-width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.mat-table {
+  width: auto;
+  min-width: 100%;
+  table-layout: auto;
+}
+
+.mat-header-cell, .mat-cell {
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.mat-header-cell {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+
+.mat-cell button {
+  margin-right: 8px;
+}
+
+.mat-header-cell, .mat-cell {
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.mat-header-cell:last-child, .mat-cell:last-child {
+  text-align: center;
+}

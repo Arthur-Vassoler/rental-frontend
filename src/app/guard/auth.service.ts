@@ -32,6 +32,7 @@ export class AuthService {
 
   private setSession(authResult: any): void {
     const payload = this.decodeJWT(authResult.token);
+    sessionStorage.setItem("authToken", JSON.stringify(authResult.token));
     sessionStorage.setItem("loggedInUser", JSON.stringify(payload));
     sessionStorage.setItem("customer", JSON.stringify(authResult.customerName));
     sessionStorage.setItem("email", JSON.stringify(authResult.email));
