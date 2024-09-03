@@ -20,10 +20,10 @@
       </mat-select>
 
       <mat-error *ngIf="form.get(field.name)?.hasError('cpfCnpjInvalid')">
-        {{ field.errorMessage || 'CPF/CNPJ inválido' }}
+        {{ field.errorMessage || 'CPF/CNPJ inválido.' }}
       </mat-error>
       <mat-error *ngIf="form.get(field.name)?.invalid && !form.get(field.name)?.hasError('cpfCnpjInvalid')">
-        {{ field.errorMessage || 'Campo inválido' }}
+        {{ field.errorMessage || 'Campo inválido.' }}
       </mat-error>
     </mat-form-field>
 

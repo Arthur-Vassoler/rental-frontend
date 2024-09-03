@@ -1,4 +1,13 @@
-<app-dynamic-form 
-  [fields]="formFields" 
-  [onSubmitCallback]="handleFormSubmit">
-</app-dynamic-form>
+<mat-card class="card">
+    <mat-card-header class="header">
+        <mat-card-title>Adicionar Hóspede</mat-card-title>
+        <mat-card-subtitle>Insira as informações do hóspede.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <app-dynamic-form 
+        [fields]="formFields" 
+        [onSubmitCallback]="handleFormSubmit">
+      </app-dynamic-form>
+    </mat-card-content>
+</mat-card>
+

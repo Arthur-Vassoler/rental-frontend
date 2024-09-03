@@ -5,10 +5,6 @@ export class CpfCnpjValidator {
     return (control: AbstractControl): ValidationErrors | null => {
       const value = control.value;
 
-      if (!value) {
-        return { cpfCnpjInvalid: 'CPF/CNPJ não pode ser nulo.' };
-      }
-
       const isValidCpf = CpfCnpjValidator.validateCPF(value);
       const isValidCnpj = CpfCnpjValidator.validateCNPJ(value);
 

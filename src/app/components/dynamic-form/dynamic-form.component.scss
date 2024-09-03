@@ -1,18 +1,19 @@
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 600px;
+  gap: 5px; 
+  max-width: 600px; 
+  max-height: auto; 
   margin: auto;
-  padding: 20px;
+  padding: 5px; 
 
   .mat-form-field {
     width: 100%;
-    
+
     .mat-form-field-wrapper {
       border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px 12px;
+      border-radius: 5px; 
+      padding: 8px 10px; 
       transition: all 0.3s ease;
 
       &:hover,
@@ -22,10 +23,10 @@ form {
     }
 
     .mat-input-element {
-      padding: 10px;
-      font-size: 16px;
+      padding: 8px; 
+      font-size: 14px; 
       color: #333;
-      border-radius: 8px;
+      border-radius: 5px;
       border: none;
 
       &:focus {
@@ -36,31 +37,31 @@ form {
     .mat-form-field-label {
       color: #999;
       font-weight: 400;
-      font-size: 14px;
-      transform: translate(12px, 10px) scale(1);
+      font-size: 12px;
+      transform: translate(10px, 8px) scale(1);
       transition: transform 0.3s ease;
     }
 
     .mat-form-field-label.mat-floating {
-      transform: translate(0, -1.6em) scale(0.75);
+      transform: translate(0, -1.4em) scale(0.75);
     }
 
     .mat-error {
       color: #f44336;
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 600;
-      margin-top: 5px;
+      margin-top: 3px;
     }
   }
 
   button {
-    padding: 15px;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: #333;
     color: #fff;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 

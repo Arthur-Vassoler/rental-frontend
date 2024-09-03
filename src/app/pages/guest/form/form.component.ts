@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { DynamicFormComponent } from '../../../components/dynamic-form/dynamic-form.component';
 import { FormGroup, Validators } from '@angular/forms';
 import { CpfCnpjValidator } from '../../../validators/customs/CpfCnpjValidator';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [DynamicFormComponent],
+  imports: [DynamicFormComponent, MatCardModule],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'
 })
@@ -17,7 +18,7 @@ export class FormComponent {
       label: 'Nome',
       name: 'name',
       validation: [Validators.required],
-      errorMessage: 'Nome não pode ser nulo.',
+      errorMessage: 'Preencha o campo Nome.',
     },
     {
       type: 'email',
